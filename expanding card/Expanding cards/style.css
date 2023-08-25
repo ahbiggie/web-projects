@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Muli", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in-out;
+
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panel h5{
+    font-size: 15px;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+.panel.active h5{
+    opacity: 1;
+    transition: opacity 0.3s step-end 0.4s;
+}
+
+
+@media(max-width: 480px) {
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5), 
+    .panel:nth-of-type(6), 
+    .panel:nth-of-type(7), 
+    .panel:nth-of-type(8), 
+    .panel:nth-of-type(9), 
+    .panel:nth-of-type(10), 
+    .panel:nth-of-type(11), 
+    .panel:nth-of-type(12), 
+    .panel:nth-of-type(13), 
+    .panel:nth-of-type(14), 
+    .panel:nth-of-type(15), 
+    .panel:nth-of-type(16) {
+        display:none;
+    }
+}
+
+@media(max-width: 580px) {
+    .container{
+        width: 100vw;
+    } 
+    .panel:nth-of-type(6), 
+    .panel:nth-of-type(7), 
+    .panel:nth-of-type(8), 
+    .panel:nth-of-type(9), 
+    .panel:nth-of-type(10), 
+    .panel:nth-of-type(11), 
+    .panel:nth-of-type(12), 
+    .panel:nth-of-type(13), 
+    .panel:nth-of-type(14), 
+    .panel:nth-of-type(15), 
+    .panel:nth-of-type(16) {
+        display:none;
+    }
+}
+@media(max-width: 720px) {
+    .container{
+        width: 100vw;
+    }  
+    .panel:nth-of-type(9), 
+    .panel:nth-of-type(10), 
+    .panel:nth-of-type(11), 
+    .panel:nth-of-type(12), 
+    .panel:nth-of-type(13), 
+    .panel:nth-of-type(14), 
+    .panel:nth-of-type(15), 
+    .panel:nth-of-type(16) {
+        display:none;
+    }
+}
